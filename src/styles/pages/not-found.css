@@ -1,0 +1,15 @@
+/* 404 page. */
+.simple-page {
+  padding: 100px 0 140px;
+}
+.simple-page h1 {
+  margin-bottom: 30px;
+}
+.simple-page > p:not(.eyebrow) {
+  margin: 20px 0 30px;
+}
+@media (max-width: 650px) {
+  .simple-page {
+    padding: 60px 0 90px;
+  }
+}

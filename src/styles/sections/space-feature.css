@@ -1,0 +1,174 @@
+/* Home / work feature with photo caption and segmented toggle. */
+.space-feature {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 9%;
+  align-items: center;
+  padding: 18px 0 112px;
+}
+.space-image {
+  position: relative;
+  height: 620px;
+  overflow: hidden;
+  background: #d8d7ca;
+}
+.space-image > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 60% center;
+}
+.photo-caption {
+  position: absolute;
+  bottom: 42px;
+  left: 30px;
+  right: 30px;
+  padding: 22px;
+  background: rgba(248, 247, 242, 0.93);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+.caption-sun {
+  font-size: 45px;
+  font-weight: 300;
+  color: var(--copper);
+}
+.space-copy > h2 {
+  margin-bottom: 30px;
+}
+.segment {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  gap: 30px;
+  margin: 0 0 30px;
+}
+.segment button {
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  font-size: 12px;
+  color: var(--muted);
+}
+.segment button[aria-pressed="true"] {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+.space-tab-content {
+  min-height: 253px;
+}
+.space-tab-content h3 {
+  font-size: 20px;
+  line-height: 1.3;
+  margin-bottom: 13px;
+}
+.space-tab-content p {
+  font-size: 14px;
+  max-width: 440px;
+}
+.space-copy > .text-link {
+  margin-top: 20px;
+}
+
+.caption-sun > svg {
+  width: 42px;
+  height: 42px;
+}
+
+@media (max-width: 1150px) {
+  .space-feature {
+    gap: 6%;
+  }
+  .space-image {
+    height: 580px;
+  }
+}
+
+@media (max-width: 900px) {
+  .space-feature {
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    padding-bottom: 75px;
+  }
+  .space-image {
+    height: 520px;
+  }
+  .space-copy .eyebrow {
+    font-size: 8px;
+  }
+  .space-copy h2 {
+    font-size: 33px;
+  }
+  .space-tab-content p {
+    font-size: 12px;
+  }
+  .space-tab-content h3 {
+    font-size: 18px;
+  }
+  .space-tab-content {
+    min-height: 270px;
+  }
+  .photo-caption {
+    left: 20px;
+    right: 20px;
+    font-size: 20px;
+    padding: 18px;
+  }
+  .caption-sun {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .space-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+    padding: 0 0 60px;
+  }
+  .space-image {
+    height: 430px;
+  }
+  .space-image > img {
+    object-position: 60% center;
+  }
+  .photo-caption {
+    bottom: 34px;
+    left: 20px;
+    right: 20px;
+    font-size: 24px;
+    padding: 22px;
+  }
+  .caption-sun {
+    display: block;
+    font-size: 36px;
+  }
+  .space-copy h2 {
+    font-size: 38px;
+    margin-bottom: 22px;
+  }
+  .segment {
+    margin-bottom: 25px;
+  }
+  .segment button {
+    min-height: 44px;
+  }
+  .space-tab-content {
+    min-height: 0;
+  }
+  .space-tab-content h3 {
+    font-size: 21px;
+  }
+  .space-tab-content p {
+    font-size: 13px;
+  }
+  .space-copy > .text-link {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,104 @@
+/* FAQ list built on native <details>. */
+.faq {
+  display: grid;
+  grid-template-columns: 0.85fr 1.2fr;
+  gap: 10%;
+  padding: 110px 0;
+}
+.faq > div > p:not(.eyebrow) {
+  font-size: 14px;
+  margin: 23px 0;
+}
+.faq .text-link {
+  margin-top: 10px;
+}
+.faq-list {
+  border-top: 1px solid var(--line);
+}
+.faq-list details {
+  border-bottom: 1px solid var(--line);
+}
+.faq-list summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 24px 0;
+}
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+.faq-num {
+  font-size: 9px;
+  color: var(--muted);
+}
+.faq-plus {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.faq-plus::before,
+.faq-plus::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 1px;
+  background: var(--ink);
+  top: 6px;
+  left: 0;
+}
+.faq-plus::after {
+  transform: rotate(90deg);
+}
+details[open] .faq-plus::after {
+  transform: rotate(0);
+}
+.faq-list details > p {
+  font-size: 13px;
+  margin: 0 25px 24px 34px;
+  line-height: 1.8;
+}
+@media (max-width: 900px) {
+  .faq {
+    padding-block: 75px;
+    gap: 6%;
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+  .faq h2 {
+    font-size: 34px;
+  }
+  .faq-list summary {
+    font-size: 12px;
+    gap: 12px;
+  }
+  .faq .eyebrow {
+    font-size: 8px;
+  }
+}
+@media (max-width: 650px) {
+  .faq {
+    display: block;
+    padding: 60px 0;
+  }
+  .faq > div > p:not(.eyebrow) {
+    margin: 20px 0;
+    font-size: 13px;
+  }
+  .faq-list {
+    margin-top: 35px;
+  }
+  .faq-list summary {
+    font-size: 13px;
+    padding: 22px 0;
+  }
+  .faq-list details > p {
+    font-size: 12px;
+    margin-left: 24px;
+    margin-right: 15px;
+  }
+}

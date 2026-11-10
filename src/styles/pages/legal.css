@@ -1,0 +1,37 @@
+/* Privacy page. */
+.legal-page {
+  max-width: 900px;
+  padding: 90px 0 100px;
+}
+.legal-page h1 {
+  font-size: clamp(44px, 5vw, 68px);
+  margin-bottom: 30px;
+}
+.legal-page .legal-intro {
+  font-size: 18px;
+}
+.legal-page h2 {
+  font-size: 25px;
+  margin: 40px 0 15px;
+}
+.legal-page p {
+  font-size: 14px;
+  line-height: 1.9;
+}
+.legal-page .text-link {
+  margin-top: 35px;
+}
+@media (max-width: 650px) {
+  .legal-page {
+    padding: 55px 0 65px;
+  }
+  .legal-page h1 {
+    font-size: 44px;
+  }
+  .legal-page .legal-intro {
+    font-size: 16px;
+  }
+  .legal-page p {
+    font-size: 13px;
+  }
+}

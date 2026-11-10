@@ -1,0 +1,110 @@
+/* Sticky site header: desktop nav, CTA and mobile menu. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(248, 247, 242, 0.97);
+  border-bottom: 1px solid rgba(32, 59, 64, 0.1);
+}
+.header-inner {
+  height: 86px;
+  max-width: 1552px;
+  width: calc(100% - 80px);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.desktop-nav {
+  display: flex;
+  gap: 34px;
+  font-size: 12px;
+  align-items: center;
+}
+.desktop-nav a {
+  border-bottom: 1px solid transparent;
+  padding: 8px 0;
+}
+.desktop-nav a:hover,
+.desktop-nav a[aria-current] {
+  border-color: var(--ink);
+}
+.menu-toggle {
+  display: none;
+}
+.mobile-nav {
+  display: none;
+}
+@media (max-width: 1150px) {
+  .header-inner {
+    width: calc(100% - 48px);
+    gap: 20px;
+  }
+  .desktop-nav {
+    gap: 22px;
+  }
+  .header-cta {
+    gap: 18px !important;
+  }
+}
+@media (max-width: 900px) {
+  .header-inner {
+    height: 76px;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .header-cta {
+    margin-left: auto;
+  }
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: 0;
+    padding: 10px 0 10px 8px;
+    font-size: 11px;
+    min-height: 44px;
+  }
+  .menu-toggle span {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  .menu-toggle i {
+    display: block;
+    width: 1px;
+    height: 13px;
+    background: var(--ink);
+    transform: rotate(20deg);
+  }
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--line);
+    padding: 20px 24px 30px;
+    gap: 5px;
+    background: var(--paper);
+    box-shadow: 0 16px 25px #203b4012;
+  }
+  .mobile-nav a {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 17px;
+  }
+}
+@media (max-width: 650px) {
+  .header-inner {
+    width: calc(100% - 32px);
+    height: 73px;
+    gap: 15px;
+  }
+  .header-cta {
+    display: none;
+  }
+  .menu-toggle {
+    margin-left: auto;
+  }
+}

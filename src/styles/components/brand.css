@@ -1,0 +1,50 @@
+/* Bird mark + wordmark lock-up (header and footer). */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+.brand > svg {
+  width: 48px;
+  height: 48px;
+}
+.brand strong {
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  display: block;
+  font-weight: 500;
+}
+.brand small {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  display: block;
+  line-height: 1;
+  margin-top: 8px;
+  margin-left: 2px;
+}
+@media (max-width: 1150px) {
+  .brand strong {
+    font-size: 25px;
+  }
+  .brand > svg {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media (max-width: 650px) {
+  .brand > svg {
+    width: 38px;
+    height: 38px;
+  }
+  .brand strong {
+    font-size: 25px;
+  }
+  .brand small {
+    font-size: 7px;
+    letter-spacing: 2.7px;
+    margin-top: 7px;
+  }
+}

@@ -1,0 +1,95 @@
+/* Home page introduction (#welcome). */
+.intro {
+  padding-block: 104px;
+  display: grid;
+  grid-template-columns: 1fr 2.1fr;
+  gap: 50px;
+  border-bottom: 1px solid var(--line);
+}
+.intro-heading > svg {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 15px;
+  color: var(--copper);
+}
+.intro h2 {
+  font-size: clamp(31px, 3.5vw, 49px);
+  line-height: 1.2;
+}
+.intro h2 span {
+  color: #82908c;
+}
+.intro-bottom {
+  display: flex;
+  gap: 54px;
+  align-items: end;
+  margin-top: 24px;
+}
+.intro-bottom > p {
+  max-width: 440px;
+  font-size: 14px;
+}
+.intro-bottom .text-link {
+  flex-shrink: 0;
+}
+@media (max-width: 1150px) {
+  .intro {
+    grid-template-columns: 0.6fr 2fr;
+    gap: 40px;
+  }
+  .intro-bottom {
+    gap: 30px;
+    align-items: start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 900px) {
+  .intro {
+    padding-block: 70px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .intro-heading {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .intro-heading svg {
+    margin: 0;
+  }
+  .intro-heading .eyebrow {
+    margin: 0;
+  }
+  .intro-bottom {
+    flex-direction: row;
+    align-items: end;
+  }
+}
+@media (max-width: 650px) {
+  .intro {
+    padding-block: 55px;
+    gap: 24px;
+  }
+  .intro-heading svg {
+    width: 45px;
+    height: 45px;
+  }
+  .intro-heading .eyebrow {
+    font-size: 8px;
+  }
+  .intro h2 {
+    font-size: 30px;
+    letter-spacing: -1.3px;
+    line-height: 1.23;
+  }
+  .intro-bottom {
+    display: block;
+    margin-top: 20px;
+  }
+  .intro-bottom p {
+    font-size: 13px;
+  }
+  .intro-bottom .text-link {
+    margin-top: 24px;
+  }
+}

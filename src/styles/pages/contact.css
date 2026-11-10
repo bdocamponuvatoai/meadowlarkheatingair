@@ -1,0 +1,347 @@
+/* Contact page: aside, enquiry form and review step. */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr;
+  gap: 9%;
+  padding: 80px 0 100px;
+  align-items: start;
+}
+.contact-aside {
+  position: sticky;
+  top: 140px;
+}
+.contact-aside h1 {
+  font-size: clamp(45px, 5.3vw, 75px);
+}
+.contact-aside em {
+  color: var(--copper);
+}
+.contact-aside > p:not(.eyebrow) {
+  margin-top: 25px;
+  font-size: 15px;
+  max-width: 340px;
+}
+.contact-person {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 30px 0;
+  margin-top: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.contact-person svg {
+  width: 50px;
+  height: 50px;
+}
+.contact-person strong {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+}
+.contact-person span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.contact-preview {
+  padding: 28px 0;
+}
+.contact-preview h2 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  margin-bottom: 15px;
+}
+.contact-preview p {
+  font-size: 12px;
+  max-width: 370px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+.contact-aside .text-link {
+  font-size: 11px;
+}
+.enquiry-form,
+.enquiry-review {
+  background: #eeeee7;
+  border: 1px solid #dedfd4;
+  padding: 40px;
+}
+.enquiry-form > .eyebrow,
+.enquiry-review > .eyebrow {
+  font-size: 8px;
+}
+.enquiry-form h2,
+.enquiry-review h2 {
+  font-size: 31px;
+  margin-bottom: 18px;
+}
+.form-intro,
+.enquiry-review > p:not(.eyebrow) {
+  font-size: 12px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 25px 0;
+}
+legend {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.property-radios {
+  display: flex;
+  gap: 12px;
+}
+.property-radios label {
+  display: flex;
+  align-items: center;
+  background: #f8f7f2;
+  border: 1px solid #cbd1c7;
+  flex: 1;
+  gap: 10px;
+  padding: 13px;
+  cursor: pointer;
+}
+.property-radios input {
+  accent-color: var(--ink);
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+.property-radios span {
+  font-size: 12px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+form label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink);
+}
+form label > span {
+  font-size: 8px;
+  color: var(--muted);
+  font-weight: 400;
+  float: right;
+}
+form input:not([type="radio"]),
+form select,
+form textarea {
+  width: 100%;
+  min-width: 0;
+  margin-top: 9px;
+  border: 1px solid #cbd1c7;
+  background: #fbfaf6;
+  padding: 13px 12px;
+  color: var(--ink);
+  border-radius: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+form input:not([type="radio"]),
+form select {
+  min-height: 47px;
+}
+form input::placeholder,
+form textarea::placeholder {
+  color: #6e7973;
+  opacity: 1;
+}
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+form > label {
+  margin-top: 23px;
+}
+.form-notice {
+  display: flex;
+  gap: 15px;
+  border-top: 1px solid #cbd1c7;
+  margin-top: 28px;
+  padding-top: 20px;
+  margin-bottom: 24px;
+}
+.form-notice > span {
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--copper);
+}
+.form-notice p {
+  font-size: 11px;
+  line-height: 1.8;
+}
+.form-notice strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+.form-privacy {
+  font-size: 9px;
+  margin-top: 16px;
+}
+.form-privacy a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.enquiry-review dl {
+  margin: 20px 0 30px;
+}
+.enquiry-review dl > div {
+  border-bottom: 1px solid #cbd1c7;
+  padding: 13px 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  font-size: 12px;
+}
+.enquiry-review dt {
+  color: var(--muted);
+}
+.enquiry-review dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.form-actions {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.edit-button {
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  padding: 5px 0;
+  font-size: 12px;
+  background: none;
+}
+.download-status {
+  margin-top: 20px;
+  font-size: 11px !important;
+}
+@media (max-width: 1150px) {
+  .contact-layout {
+    gap: 6%;
+    grid-template-columns: 0.85fr 1.2fr;
+  }
+  .enquiry-form,
+  .enquiry-review {
+    padding: 30px;
+  }
+}
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 55px;
+  }
+  .contact-aside {
+    position: static;
+  }
+  .contact-aside h1 {
+    font-size: 62px;
+  }
+  .contact-person {
+    max-width: 500px;
+  }
+  .contact-preview {
+    padding-block: 22px;
+  }
+  .contact-preview p {
+    max-width: 650px;
+  }
+  .contact-preview p:last-child {
+    margin-bottom: 0;
+  }
+  .enquiry-form,
+  .enquiry-review {
+    padding: 35px;
+  }
+}
+@media (max-width: 650px) {
+  .contact-layout {
+    padding: 50px 0 60px;
+    gap: 35px;
+  }
+  .contact-aside h1 {
+    font-size: 62px;
+  }
+  .contact-aside > p:not(.eyebrow) {
+    font-size: 14px;
+  }
+  .contact-person {
+    margin-top: 12px;
+    padding: 23px 0;
+  }
+  .contact-preview p {
+    font-size: 12px;
+  }
+  .enquiry-form,
+  .enquiry-review {
+    padding: 25px 20px;
+  }
+  .enquiry-form h2,
+  .enquiry-review h2 {
+    font-size: 30px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .enquiry-form > .eyebrow,
+  .enquiry-review > .eyebrow {
+    font-size: 7px;
+    letter-spacing: 0.11em;
+  }
+  .form-intro {
+    font-size: 12px;
+  }
+  form input:not([type="radio"]),
+  form select,
+  form textarea {
+    font-size: 16px;
+    padding: 12px 10px;
+  }
+  form label {
+    font-size: 11px;
+  }
+  .property-radios label {
+    padding: 12px 10px;
+  }
+  .property-radios span {
+    font-size: 11px;
+  }
+  .form-notice p {
+    font-size: 10px;
+  }
+  .form-notice {
+    gap: 10px;
+  }
+  .enquiry-form > .button {
+    font-size: 12px;
+    gap: 25px;
+    width: 100%;
+  }
+  .form-privacy {
+    font-size: 8px;
+  }
+  .enquiry-review dl > div {
+    grid-template-columns: 1fr 1.8fr;
+    gap: 14px;
+    font-size: 11px;
+  }
+  .form-actions {
+    gap: 20px;
+  }
+  .form-actions .button {
+    width: 100%;
+    font-size: 12px;
+  }
+}

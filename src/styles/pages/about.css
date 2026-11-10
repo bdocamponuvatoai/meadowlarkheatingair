@@ -1,0 +1,125 @@
+/* About page. */
+.about-photo {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+}
+.about-photo > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 65%;
+}
+.about-story {
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+}
+.about-story p:not(.eyebrow) {
+  margin-bottom: 22px;
+  font-size: 15px;
+}
+.local-section {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 10%;
+  align-items: center;
+  background: #e6eade;
+  padding: 55px 70px;
+  margin-bottom: 100px;
+}
+.local-section p:not(.eyebrow) {
+  max-width: 530px;
+  font-size: 14px;
+  margin-top: 25px;
+}
+.local-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #8d9d88;
+  border-radius: 50%;
+  width: 255px;
+  height: 255px;
+  flex-direction: column;
+  text-align: center;
+}
+.local-badge > svg {
+  width: 75px;
+  height: 75px;
+  color: var(--copper);
+}
+.local-badge > span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+.local-badge strong {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: -0.5px;
+  display: block;
+}
+.local-badge small {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 3px;
+  margin-top: 12px;
+}
+@media (max-width: 1150px) {
+  .local-section {
+    padding: 45px;
+    gap: 8%;
+  }
+}
+@media (max-width: 900px) {
+  .about-story {
+    padding-block: 70px;
+    gap: 7%;
+  }
+  .local-section {
+    padding: 35px;
+    grid-template-columns: 0.9fr 1.2fr;
+    gap: 25px;
+  }
+  .local-badge {
+    width: 210px;
+    height: 210px;
+  }
+}
+@media (max-width: 650px) {
+  .about-photo {
+    height: 350px;
+  }
+  .about-photo > img {
+    object-position: 68% center;
+  }
+  .about-story {
+    display: block;
+    padding: 55px 0;
+  }
+  .about-story > div:nth-child(2) {
+    margin-top: 27px;
+  }
+  .about-story p:not(.eyebrow) {
+    font-size: 14px;
+  }
+  .local-section {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    padding: 35px 25px;
+    align-items: flex-start;
+    margin-bottom: 60px;
+  }
+  .local-badge {
+    align-self: center;
+    width: 200px;
+    height: 200px;
+  }
+  .local-section p:not(.eyebrow) {
+    font-size: 13px;
+  }
+}

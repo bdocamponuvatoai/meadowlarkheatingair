@@ -1,0 +1,22 @@
+/* Heading row: title on the left, supporting copy on the right. */
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+  margin-bottom: 46px;
+}
+.section-heading > p {
+  font-size: 14px;
+  max-width: 360px;
+}
+@media (max-width: 650px) {
+  .section-heading {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .section-heading > p {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+}

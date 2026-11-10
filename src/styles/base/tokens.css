@@ -1,0 +1,15 @@
+/* Design tokens: colours, radius and font stacks. */
+
+:root {
+  --paper: #f8f7f2;
+  --ink: #203b40;
+  --muted: #62706e;
+  --peach: #efba94;
+  --copper: #ac5e36;
+  --line: #d9dcd4;
+  --bird-wing: #e6a071;
+  --radius: 3px;
+  color-scheme: light;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+}

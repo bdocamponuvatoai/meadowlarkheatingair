@@ -1,0 +1,19 @@
+/* Page width container and responsive visibility helpers. */
+.wrap {
+  max-width: 1440px;
+  width: calc(100% - 112px);
+  margin-inline: auto;
+}
+@media (max-width: 1150px) {
+  .wrap {
+    width: calc(100% - 72px);
+  }
+}
+@media (max-width: 650px) {
+  .wrap {
+    width: calc(100% - 40px);
+  }
+  .desktop-only {
+    display: none;
+  }
+}

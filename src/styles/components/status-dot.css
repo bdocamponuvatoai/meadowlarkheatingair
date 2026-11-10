@@ -1,0 +1,10 @@
+/* Peach dot used before location labels. */
+.status-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--peach);
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: 2px;
+}

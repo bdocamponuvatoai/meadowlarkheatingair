@@ -1,0 +1,27 @@
+/* Bulleted list with copper plus markers and hairlines. */
+.line-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.line-list li {
+  font-size: 12px;
+  border-bottom: 1px solid var(--line);
+  padding: 11px 0;
+  display: flex;
+  gap: 12px;
+}
+.line-list li::before {
+  content: "+";
+  color: var(--copper);
+}
+@media (max-width: 900px) {
+  .line-list li {
+    font-size: 11px;
+  }
+}
+@media (max-width: 650px) {
+  .line-list li {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,84 @@
+/* Closing call to action band. */
+.closing {
+  background: #edc8ac;
+  position: relative;
+  overflow: hidden;
+}
+.closing-inner {
+  padding: 85px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 60px;
+  position: relative;
+}
+.closing h2 {
+  font-size: clamp(64px, 7vw, 100px);
+  line-height: 1;
+}
+.closing .eyebrow {
+  font-size: 9px;
+  margin-bottom: 25px;
+}
+.closing-inner > div:nth-child(2) {
+  justify-self: center;
+  z-index: 1;
+}
+.closing p:not(.eyebrow) {
+  color: #45564f;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+.closing-line {
+  position: absolute;
+  right: -190px;
+  top: -240px;
+  width: 650px;
+  height: 650px;
+  border: 1px solid #203b4020;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.closing-line::after {
+  content: "";
+  position: absolute;
+  inset: 35px;
+  border: 1px solid #203b4020;
+  border-radius: 50%;
+}
+@media (max-width: 900px) {
+  .closing-inner {
+    padding: 65px 0;
+    gap: 35px;
+  }
+  .closing h2 {
+    font-size: 70px;
+  }
+}
+@media (max-width: 650px) {
+  .closing-inner {
+    display: block;
+    padding: 55px 0;
+  }
+  .closing h2 {
+    font-size: 72px;
+  }
+  .closing .eyebrow {
+    font-size: 8px;
+    max-width: 260px;
+  }
+  .closing-inner > div:nth-child(2) {
+    position: relative;
+    margin-top: 32px;
+  }
+  .closing p:not(.eyebrow) {
+    font-size: 13px;
+    margin-bottom: 25px;
+  }
+  .closing-line {
+    width: 480px;
+    height: 480px;
+    right: -350px;
+    top: -50px;
+  }
+}

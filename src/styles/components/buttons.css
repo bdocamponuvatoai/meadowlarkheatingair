@@ -1,0 +1,65 @@
+/* Buttons, text links and the arrow icon they share. */
+.arrow {
+  height: 22px;
+  width: 22px;
+  flex-shrink: 0;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+  min-height: 56px;
+  padding: 15px 23px;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.button:hover {
+  background: #36565a;
+  transform: translateY(-2px);
+}
+.button.small {
+  min-height: 46px;
+  padding: 12px 17px;
+  gap: 25px;
+  font-size: 12px;
+}
+.button-peach {
+  background: var(--peach);
+  color: var(--ink);
+  border-color: var(--peach);
+}
+.button-peach:hover {
+  background: #f7cdb0;
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 8px;
+  white-space: normal;
+  line-height: 1.5;
+}
+.text-link:hover .arrow,
+.button:hover .arrow {
+  transform: translateX(3px);
+}
+.arrow {
+  transition: transform 0.2s;
+}
+@media (max-width: 650px) {
+  .text-link {
+    font-size: 12px;
+  }
+}

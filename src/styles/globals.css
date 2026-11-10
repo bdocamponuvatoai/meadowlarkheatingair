@@ -1,0 +1,38 @@
+/*
+ * Global stylesheet. The IMPORT ORDER MATTERS: partials are listed in the order
+ * their rules first appeared in the original single-file stylesheet, and the
+ * cascade depends on it (later rules win at equal specificity). Add new rules
+ * to the partial that owns the selector rather than appending here.
+ *
+ * The reset is wrapped in `@layer base`, so every unlayered rule below
+ * overrides it regardless of specificity, exactly as the original Tailwind
+ * build did.
+ */
+@import "./base/reset.css";
+@import "./base/tokens.css";
+@import "./base/base.css";
+@import "./components/layout.css";
+@import "./components/eyebrow.css";
+@import "./components/buttons.css";
+@import "./components/status-dot.css";
+@import "./components/skip-link.css";
+@import "./layout/header.css";
+@import "./components/brand.css";
+@import "./sections/hero.css";
+@import "./sections/intro.css";
+@import "./sections/services.css";
+@import "./components/section-heading.css";
+@import "./sections/space-feature.css";
+@import "./components/line-list.css";
+@import "./sections/craft.css";
+@import "./sections/comfort-guide.css";
+@import "./sections/faq.css";
+@import "./sections/closing.css";
+@import "./layout/footer.css";
+@import "./sections/page-heading.css";
+@import "./pages/services.css";
+@import "./pages/about.css";
+@import "./pages/comfort-guide.css";
+@import "./pages/contact.css";
+@import "./pages/legal.css";
+@import "./pages/not-found.css";

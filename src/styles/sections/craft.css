@@ -1,0 +1,96 @@
+/* Home page photo + copy split section. */
+.craft {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #e9ece3;
+}
+.craft-image {
+  position: relative;
+  min-height: 610px;
+}
+.craft-image > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% center;
+  position: absolute;
+}
+.craft-copy {
+  padding: 80px 12%;
+  max-width: 850px;
+}
+.craft-copy h2 {
+  font-size: clamp(32px, 3vw, 46px);
+  margin-bottom: 26px;
+}
+.craft-copy > p:not(.eyebrow) {
+  font-size: 14px;
+  margin-bottom: 18px;
+  max-width: 420px;
+}
+.craft-copy > .text-link {
+  margin-top: 17px;
+}
+.craft-signoff {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid #bdc9bb;
+  margin-top: 36px;
+  padding-top: 23px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.craft-signoff > svg {
+  width: 40px;
+  height: 40px;
+}
+.craft-signoff small {
+  font-size: 8px;
+  letter-spacing: 0.13em;
+  color: var(--muted);
+}
+@media (max-width: 1150px) {
+  .craft-copy {
+    padding: 65px 10%;
+  }
+}
+@media (max-width: 900px) {
+  .craft-image {
+    min-height: 570px;
+  }
+  .craft-copy {
+    padding: 55px 9%;
+  }
+  .craft-copy h2 {
+    font-size: 32px;
+  }
+  .craft-copy > p:not(.eyebrow) {
+    font-size: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .craft {
+    display: flex;
+    flex-direction: column;
+  }
+  .craft-image {
+    min-height: 0;
+    height: 390px;
+  }
+  .craft-image > img {
+    object-position: center 30%;
+  }
+  .craft-copy {
+    padding: 45px 25px 40px;
+  }
+  .craft-copy h2 {
+    font-size: 36px;
+  }
+  .craft-copy > p:not(.eyebrow) {
+    font-size: 13px;
+  }
+  .craft-signoff {
+    margin-top: 30px;
+  }
+}

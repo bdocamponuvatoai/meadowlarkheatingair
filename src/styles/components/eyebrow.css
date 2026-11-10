@@ -1,0 +1,16 @@
+/* Small uppercase label above headings. */
+.eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+@media (max-width: 650px) {
+  .eyebrow {
+    font-size: 8px;
+    margin-bottom: 18px;
+    letter-spacing: 0.14em;
+  }
+}
